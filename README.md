@@ -10,13 +10,13 @@ sca-best-practice是SCA(Spring Cloud Alibaba)的一个Demo示例，里面包含�
 
  * 首先请下载以下微服务组件服务端，请将以下文件都下载到同一个目录当中，以下简称为**工作目录**，例如/home/user/temp。
 
-[https://github.com/alibaba/nacos/releases/download/0.7.0/nacos-server-0.7.0.zip](https://github.com/alibaba/nacos/releases/download/0.7.0/nacos-server-0.7.0.zip)
+[http://sca-best-practice.oss-cn-hangzhou.aliyuncs.com/nacos-server-0.7.0.zip](http://sca-best-practice.oss-cn-hangzhou.aliyuncs.com/nacos-server-0.7.0.zip)
 
-[https://github.com/alibaba/Sentinel/releases/download/1.4.0/sentinel-dashboard-1.4.0.jar](https://github.com/alibaba/Sentinel/releases/download/1.4.0/sentinel-dashboard-1.4.0.jar)
+[http://sca-best-practice.oss-cn-hangzhou.aliyuncs.com/sentinel-dashboard-1.4.0.jar](http://sca-best-practice.oss-cn-hangzhou.aliyuncs.com/sentinel-dashboard-1.4.0.jar)
 
-[https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.3.2/rocketmq-all-4.3.2-bin-release.zip](https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.3.2/rocketmq-all-4.3.2-bin-release.zip)
+[http://sca-best-practice.oss-cn-hangzhou.aliyuncs.com/rocketmq-all-4.3.2-bin-release.zip](http://sca-best-practice.oss-cn-hangzhou.aliyuncs.com/rocketmq-all-4.3.2-bin-release.zip)
 
-[http://download.redis.io/releases/redis-5.0.3.tar.gz](http://download.redis.io/releases/redis-5.0.3.tar.gz)
+[http://sca-best-practice.oss-cn-hangzhou.aliyuncs.com/redis-5.0.3.tar.gz](http://sca-best-practice.oss-cn-hangzhou.aliyuncs.com/redis-5.0.3.tar.gz)
 
  * 将本项目clone到本地，然后在项目根目录执行以下命令，即可启动整个项目，其中包括微服务组件服务端和示例应用。
 
@@ -86,5 +86,8 @@ http://127.0.0.1:12000
  * 在项目根目录执行以下命令，即可停止整个项目，其中包括微服务组件服务端和示例应用。
 
 ```
+# mac/unix 系统
 sh shutdown.sh /home/user/temp(你的工作目录)
+# windows 系统
+暂时不支持，开发中，欢迎共建
 ```
