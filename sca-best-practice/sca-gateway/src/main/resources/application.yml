@@ -1,0 +1,17 @@
+server:
+  port: 9999
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - uri: http://localhost:10001
+        predicates:
+        - Path=/user-center/**
+        filters:
+        - StripPrefix=1
+      - uri: http://localhost:10002
+        predicates:
+        - Path=/order/**
+        filters:
+        - StripPrefix=1
