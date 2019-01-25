@@ -12,7 +12,7 @@ sca-best-practice是SCA(Spring Cloud Alibaba)的一个Demo示例，里面包含�
 
 [https://github.com/alibaba/nacos/releases/download/0.7.0/nacos-server-0.7.0.zip](https://github.com/alibaba/nacos/releases/download/0.7.0/nacos-server-0.7.0.zip)
 
-[https://github.com/alibaba/Sentinel/releases/download/1.4.1/sentinel-dashboard-1.4.1.jar](https://github.com/alibaba/Sentinel/releases/download/1.4.1/sentinel-dashboard-1.4.1.jar)
+[https://github.com/alibaba/Sentinel/releases/download/1.4.0/sentinel-dashboard-1.4.0.jar](https://github.com/alibaba/Sentinel/releases/download/1.4.0/sentinel-dashboard-1.4.0.jar)
 
 [https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.3.2/rocketmq-all-4.3.2-bin-release.zip](https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.3.2/rocketmq-all-4.3.2-bin-release.zip)
 
