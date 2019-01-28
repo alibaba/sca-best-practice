@@ -68,9 +68,17 @@ echo "Redis start success."
 
 echo "waiting for servers start..."
 
+RESULT=`curl -s -X POST -d "dataId=user-center.yaml&group=DEFAULT_GROUP&content=user.id: chenzhu" http://127.0.0.1:8848/nacos/v1/cs/configs`
+TIMES=20
+
 sleep 10
 
-RESULT=`curl -s -X POST -d "dataId=user-center.yaml&group=DEFAULT_GROUP&content=user.id: chenzhu" http://127.0.0.1:8848/nacos/v1/cs/configs`
+while [ "$RESULT" != "true" ] && [ $TIMES > 0 ]
+do
+    RESULT=`curl -s -X POST -d "dataId=user-center.yaml&group=DEFAULT_GROUP&content=user.id: chenzhu" http://127.0.0.1:8848/nacos/v1/cs/configs`
+    let TIMES=TIMES-1
+    sleep 2
+done
 
 if [ "$RESULT" != "true" ];then
     echo "Create config failed."
@@ -86,6 +94,16 @@ echo "sca-user-center start success."
 cd $BASE_DIR/sca-best-practice/sca-order && nohup mvn spring-boot:run > $DIR/sca-order.log 2>&1 &
 echo "sca-order start success."
 
+RESULT=`curl -I -m 10 -o /dev/null -s -w %{http_code} http://127.0.0.1:9999/user-center/example/testRedis`
+TIMES=20
+
 sleep 10
+
+while [ "$RESULT" != "200" ] && [ $TIMES > 0 ]
+do
+    RESULT=`curl -I -m 10 -o /dev/null -s -w %{http_code} http://127.0.0.1:9999/user-center/example/testRedis`
+    let TIMES=TIMES-1
+    sleep 2
+done
 
 echo "Servers and applications has been started successfully."
