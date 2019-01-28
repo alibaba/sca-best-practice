@@ -21,32 +21,21 @@ RemoteSystemsTempFiles/
 .classpath
 **/.classpath
 Servers/
+**/target/**
+**/classes/**
 
+#idea
 *.iml
 *.ipr
 *.iws
 .idea
 .idea/**
 
-**/*.iml
-**/*.ipr
-**/*.iws
-**/.idea
-**/.idea/**
-
-**/target/**
-
-**/classes/**
-
-# eclipse
-
+# other
 .DS_Store
 **/.DS_Store
-
 **/**/target/
-
 **/**/target/**
-
 **/**/test.propertiess
-
 key.txt
+codeless-framework/0
