@@ -5,6 +5,9 @@ if [ $# -lt 1 ];then
     exit 1
 fi
 
+command -v java >/dev/null 2>&1 || { echo >&2 "Require java but it's not installed.  Aborting."; exit 1; }
+command -v mvn >/dev/null 2>&1 || { echo >&2 "Require mvn but it's not installed.  Aborting."; exit 1; }
+
 DIR=$1
 
 if [ ! -d "$DIR" ];then
