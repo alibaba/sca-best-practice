@@ -30,7 +30,7 @@ import java.util.Locale;
  * @author xiaolongzuo
  */
 @Configuration
-@ConditionalOnProperty(name = "spring.yasha.web.enabled", matchIfMissing = true)
+@ConditionalOnProperty(name = "spring.codeless.web.enabled", matchIfMissing = true)
 public class CodelessWebAutoConfiguration implements InitializingBean {
 
     private final RequestMappingHandlerAdapter requestMappingHandlerAdapter;
