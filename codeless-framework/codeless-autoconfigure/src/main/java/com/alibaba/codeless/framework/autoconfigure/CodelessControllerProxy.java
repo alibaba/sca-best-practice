@@ -49,9 +49,12 @@ public class CodelessControllerProxy implements ApplicationContextAware {
     }
 
     private String getCodelessName(HttpServletRequest request) {
-        String codelessName = request.getRequestURI().split("/")[0];
+    	String uri =  request.getRequestURI();
+    	// add by phoema 支持server.servlet.context-path自定义
+    	uri = uri.substring(request.getContextPath().length());
+        String codelessName = uri.split("/")[0];
         if (StringUtils.isEmpty(codelessName)) {
-            codelessName = request.getRequestURI().split("/")[1];
+            codelessName = uri.split("/")[1];
         }
         return codelessName;
     }
